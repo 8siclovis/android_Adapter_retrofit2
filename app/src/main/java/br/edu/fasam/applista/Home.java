@@ -72,5 +72,31 @@ public class Home extends AppCompatActivity {
 
             }
         });
+        
+        Call<User> put = apiUserResouce.put(user);
+        put.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
+
+        Call<Void> delete = apiUserResouce.delete(user);
+        delete.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
     }
 }
